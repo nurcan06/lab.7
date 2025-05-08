@@ -1,0 +1,23 @@
+massiv = [5, 8, 3, 7, 2, 9]
+
+with open("massiv.txt", "w") as f:
+    for eded in massiv:
+        f.write(str(eded) + "\n")
+
+ilk_3_eded = []
+with open("massiv.txt", "r") as f:
+    for _ in range(3):
+        sətir = f.readline()
+        if sətir:
+            ilk_3_eded.append(int(sətir.strip()))
+
+with open("ilk3.txt", "w") as f:
+    for eded in ilk_3_eded:
+        f.write(str(eded) + "\n")
+
+hasil = 1
+for eded in ilk_3_eded:
+    hasil *= eded
+
+print( ilk_3_eded)
+print( hasil)
